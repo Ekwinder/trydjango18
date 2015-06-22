@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = '4@ny2)@%!q%g=ww6z*v34w#u20s%2r&_yatx3nlb&zxyjr5@xf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'yourgmail@gmail.com'
@@ -115,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_pro', 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_in_env', 'static_root')
 
 
 STATICFILES_DIRS = (
@@ -126,7 +126,7 @@ STATICFILES_DIRS = (
     )
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT  = os.path.join(os.path.dirname(BASE_DIR), 'static_in_pro', 'media_root')
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'static_in_env', 'media_root')
 
 # Crispy form tags settings
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
